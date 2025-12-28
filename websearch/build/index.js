@@ -4,7 +4,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import express from "express";
 import getRawBody from "raw-body";
 import { randomUUID } from "crypto";
-import { toolRegistry, webSearchAdapter, socialMediaAdapter, contentAdapter, xPostsAdapter, pornHubAdapter, pornPicsAdapter, freeApisAdapter, productivityApisAdapter, systemApisAdapter } from "./adapters/index.js";
+import { toolRegistry, webSearchAdapter, socialMediaAdapter, contentAdapter, xPostsAdapter, pornHubAdapter, pornPicsAdapter, freeApisAdapter, productivityApisAdapter, systemApisAdapter, terminalApisAdapter } from "./adapters/index.js";
 const server = new McpServer({
     name: "websearch",
     version: "0.1.0",
@@ -19,6 +19,7 @@ toolRegistry.register(pornPicsAdapter);
 toolRegistry.register(freeApisAdapter);
 toolRegistry.register(productivityApisAdapter);
 toolRegistry.register(systemApisAdapter);
+toolRegistry.register(terminalApisAdapter);
 // Register all tools with the MCP server
 const allTools = toolRegistry.getAllTools();
 allTools.forEach(tool => {

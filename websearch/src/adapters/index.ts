@@ -8,4 +8,5 @@ export { pornPicsAdapter } from "./pornpics.adapter.js";
 export { freeApisAdapter } from "./free-apis.adapter.js";
 export { productivityApisAdapter } from "./productivity-apis.adapter.js";
 export { systemApisAdapter } from "./system-apis.adapter.js";
+export { terminalApisAdapter } from "./terminal-apis.adapter.js";
 export type { Tool, Adapter, AdapterRegistry } from "./adapter.js";
