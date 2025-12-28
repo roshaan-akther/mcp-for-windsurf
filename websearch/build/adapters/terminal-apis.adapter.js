@@ -281,7 +281,7 @@ const readTerminalTool = {
     description: "Read output from a terminal (by PID)",
     schema: {
         pid: z.union([z.string(), z.number()]).describe("Terminal PID"),
-        lines: z.number().min(1).max(100).default(50).describe("Number of recent lines to show (1-100)")
+        lines: z.number().min(1).max(15000).default(50).describe("Number of recent lines to show (1-15000)")
     },
     handler: async ({ pid, lines }) => {
         const pidStr = String(pid);
