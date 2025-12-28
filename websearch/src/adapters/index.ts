@@ -1,0 +1,11 @@
+export { toolRegistry } from "./registry.js";
+export { webSearchAdapter } from "./web-search.adapter.js";
+export { socialMediaAdapter } from "./social-media.adapter.js";
+export { contentAdapter } from "./content.adapter.js";
+export { xPostsAdapter } from "./x-posts.adapter.js";
+export { pornHubAdapter } from "./pornhub.adapter.js";
+export { pornPicsAdapter } from "./pornpics.adapter.js";
+export { freeApisAdapter } from "./free-apis.adapter.js";
+export { productivityApisAdapter } from "./productivity-apis.adapter.js";
+export { systemApisAdapter } from "./system-apis.adapter.js";
+export type { Tool, Adapter, AdapterRegistry } from "./adapter.js";

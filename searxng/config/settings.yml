@@ -1,0 +1,316 @@
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "SearXNG"
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  formats:
+    - json
+
+engines:
+  - name: google
+    engine: google
+    shortcut: go
+    disabled: true
+
+  - name: google images
+    engine: google_images
+    shortcut: goi
+    categories: [images]
+    disabled: true
+
+  - name: google videos
+    engine: google_videos
+    shortcut: gov
+    categories: [videos]
+    disabled: true
+
+  - name: startpage
+    engine: startpage
+    shortcut: sp
+    startpage_categ: web
+    categories: [general, web]
+
+  - name: startpage images
+    engine: startpage
+    shortcut: spi
+    startpage_categ: images
+    categories: [images, web]
+
+  - name: brave
+    engine: brave
+    shortcut: br
+    time_range_support: true
+    paging: true
+    categories: [general, web]
+    brave_category: search
+
+  - name: brave.images
+    engine: brave
+    network: brave
+    shortcut: brimg
+    categories: [images]
+    brave_category: images
+
+  - name: brave.videos
+    engine: brave
+    network: brave
+    shortcut: brvid
+    categories: [videos, web]
+    brave_category: videos
+
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    display_type: ["infobox"]
+    categories: [general]
+
+  - name: wikidata
+    engine: wikidata
+    shortcut: wd
+    timeout: 3.0
+    weight: 2
+    display_type: ["infobox"]
+    categories: [general]
+
+  - name: wikicommons.images
+    engine: wikicommons
+    shortcut: wci
+    categories: [images]
+    wc_search_type: image
+
+  - name: arch linux wiki
+    disabled: true
+
+  - name: artic
+    disabled: true
+
+  - name: arxiv
+    disabled: true
+
+  - name: bandcamp
+    disabled: true
+
+  - name: bing images
+    disabled: true
+
+  - name: bing news
+    disabled: true
+
+  - name: bing videos
+    disabled: true
+
+  - name: openverse
+    disabled: true
+
+  - name: chefkoch
+    disabled: true
+
+  - name: currency
+    disabled: true
+
+  - name: deviantart
+    disabled: true
+
+  - name: devicons
+    disabled: true
+
+  - name: docker hub
+    disabled: true
+
+  - name: duckduckgo
+    disabled: true
+
+  - name: etymonline
+    disabled: true
+
+  - name: flickr
+    disabled: true
+
+  - name: genius
+    disabled: true
+
+  - name: gentoo
+    disabled: true
+
+  - name: github
+    disabled: true
+
+  - name: google news
+    disabled: true
+
+  - name: google scholar
+    disabled: true
+
+  - name: hoogle
+    disabled: true
+
+  - name: kickass
+    disabled: true
+
+  - name: lemmy communities
+    disabled: true
+
+  - name: lemmy users
+    disabled: true
+
+  - name: lemmy posts
+    disabled: true
+
+  - name: lemmy comments
+    disabled: true
+
+  - name: lingva
+    disabled: true
+
+  - name: lucide
+    disabled: true
+
+  - name: mastodon users
+    disabled: true
+
+  - name: mastodon hashtags
+    disabled: true
+
+  - name: mdn
+    disabled: true
+
+  - name: mixcloud
+    disabled: true
+
+  - name: mankier
+    disabled: true
+
+  - name: openairedatasets
+    disabled: true
+
+  - name: openairepublications
+    disabled: true
+
+  - name: openstreetmap
+    disabled: true
+
+  - name: pdbe
+    disabled: true
+
+  - name: photon
+    disabled: true
+
+  - name: pinterest
+    disabled: true
+
+  - name: piratebay
+    disabled: true
+
+  - name: podcastindex
+    disabled: true
+
+  - name: pubmed
+    disabled: true
+
+  - name: pypi
+    disabled: true
+
+  - name: qwant news
+    disabled: true
+
+  - name: qwant images
+    disabled: true
+
+  - name: qwant videos
+    disabled: true
+
+  - name: radio browser
+    disabled: true
+
+  - name: reuters
+    disabled: true
+
+  - name: sepiasearch
+    disabled: true
+
+  - name: soundcloud
+    disabled: true
+
+  - name: stackoverflow
+    disabled: true
+
+  - name: askubuntu
+    disabled: true
+
+  - name: superuser
+    disabled: true
+
+  - name: semantic scholar
+    disabled: true
+
+  - name: startpage news
+    disabled: true
+
+  - name: solidtorrents
+    disabled: true
+
+  - name: unsplash
+    disabled: true
+
+  - name: yahoo news
+    disabled: true
+
+  - name: youtube
+    disabled: true
+
+  - name: dailymotion
+    disabled: true
+
+  - name: vimeo
+    disabled: true
+
+  - name: wikinews
+    disabled: true
+
+  - name: wiktionary
+    disabled: true
+
+  - name: wikicommons.videos
+    disabled: true
+
+  - name: wikicommons.audio
+    disabled: true
+
+  - name: wikicommons.files
+    disabled: true
+
+  - name: dictzone
+    disabled: true
+
+  - name: mymemory translated
+    disabled: true
+
+  - name: wordnik
+    disabled: true
+
+  - name: tootfinder
+    disabled: true
+
+  - name: wttr.in
+    disabled: true
+
+  - name: brave.news
+    disabled: true
+
+  - name: bt4g
+    disabled: true
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  secret_key: "2ead34b3b7c4e874ee989216abd031782e1b0028c620744a5e96302d442e367a21be31a7a47569c55e8933197c7d2733fc0696d64232048d0077eceefa61d07fddf4af4c65b2068bc14c413b3098f51eb6991c1b183741ffddaf44a268b5c537d40e70d8c6c6e90fa1517067e97c978fc9a74f6da7d9edaa97b9005ff40fdfba"
+  limiter: false
+  public_instance: false
+  image_proxy: false
+
+valkey:
+  url: false
